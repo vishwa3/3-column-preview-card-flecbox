@@ -1,0 +1,107 @@
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&display=swap");
+:root {
+  --lexend-deca: "Lexend Deca", sans-serif;
+  --big-shoulders: "Big Shoulders Display", cursive;
+  --light-gray: hsl(0, 0%, 95%);
+  --transparent-white: hsla(0, 0%, 100%, 0.75);
+  --bright-orange: hsl(31, 77%, 52%);
+  --dark-cyan: hsl(184, 100%, 22%);
+  --very-dark-cyan: hsl(179, 100%, 13%);
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+.container {
+  height: 500px;
+  width: 1000px;
+  display: flex;
+  border-radius: 10px;
+  overflow: hidden;
+}
+* {
+  padding: 0;
+  margin: 0;
+}
+.data-container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding: 50px;
+}
+.icon {
+  max-width: 30%;
+}
+.headings {
+  color: var(--light-gray);
+  font-family: var(--big-shoulders);
+  text-transform: uppercase;
+}
+.descriptions {
+  color: var(--transparent-white);
+  font-family: var(--lexend-deca);
+}
+.sedan {
+  background-color: var(--bright-orange);
+  flex-grow: 1;
+  flex-basis: 0;
+}
+.suv {
+  background-color: var(--dark-cyan);
+  flex-grow: 1;
+  flex-basis: 0;
+}
+.luxury {
+  background-color: var(--very-dark-cyan);
+  flex-grow: 1;
+  flex-basis: 0;
+}
+.button {
+  max-width: 55%;
+  background-color: var(--light-gray);
+  border-radius: 30px;
+  text-align: center;
+  justify-content: center;
+  text-transform: capitalize;
+  padding: 15px;
+  font-family: var(--lexend-deca);
+  margin-top: 70px;
+}
+.sedan > .button {
+  color: var(--bright-orange);
+}
+.suv > .button {
+  color: var(--dark-cyan);
+}
+
+.luxury > .button {
+  color: var(--very-dark-cyan);
+}
+.button:hover {
+  cursor: pointer;
+  background-color: transparent;
+  color: var(--light-gray);
+  border: 2px solid var(--light-gray);
+}
+@media screen and (max-width: 1000px) {
+  .container {
+    flex-direction: column;
+    width: 80%;
+    height: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+  .button {
+    max-width: 40%;
+    margin-top: 40px;
+  }
+}
+@media screen and (max-width: 300px) {
+  .data-container {
+    padding: 20px;
+  }
+}
